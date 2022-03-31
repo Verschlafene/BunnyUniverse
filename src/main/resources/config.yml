@@ -27,44 +27,46 @@ motd:
     - "#b19cd9Made by Nikki"
 
 chat:
+  joinMessage: true
+  joinMessageFormat: '§7[§a+§7] %player_name%'
+  leaveMessage: true
+  leaveMessageFormat: '§7[§c-§7] %player_name%'
   ranks: true
   colorperm: 'chat.color'
   allowHexColors: true
 
 ranks:
   permissionsystem: 'none'
-
   useUnlimitedLongRanks: false
-
   update-interval: -1
 
   luckperms-api:
     enabled: false
     prefix-suffix-space: false
-    chat-layout: '%prefix% %player_name% &7» '
+    chat-layout: '%prefix% &8| %player_name% &7» '
     chat-prefix:
-      owner: '&4Owner &7| &4%player_name% &7» '
-      admin: '&cAdmin &7| &c%player_name% &7» '
-      player: '&7Player | %player_name% » '
+      owner: '&4Owner &8| &4%player_name% &8» &7'
+      admin: '&4Admin &8| &4%player_name% &8» &7'
+      player: '&7Player &8| &7%player_name% &8» &7'
 
   list:
     owner:
       permission: 'rank.owner'
-      prefix: '&4Owner &7| &4'
-      suffix: ' &7[&eTeam&7]'
-      chatPrefix: '&7[&cOwner&7] %player_name% » '
+      prefix: '&4Owner &8| &4'
+      suffix: ' &8[&eTeam&8]'
+      chatPrefix: '&4Owner &8| &4%player_name% &8» &7'
       placeholder-name: 'Owner'
     admin:
       permission: 'rank.admin'
-      prefix: '&cAdmin &7| &c'
-      suffix: ' &7[&eTeam&7]'
-      chatPrefix: '&7[&4Admin&7] %player_name% » '
+      prefix: '&cAdmin &8| &c'
+      suffix: ' &8[&eTeam&8]'
+      chatPrefix: '&4Admin &8| &4%player_name% &8» &7'
       placeholder-name: 'Admin'
     player:
       permission: 'rank.player'
-      prefix: '&7Player | '
+      prefix: '&7Player &8| &7'
       suffix: ''
-      chatPrefix: '&7[&aPlayer&7] %player_name% » '
+      chatPrefix: '&7Player &8| &7%player_name% &8» &7'
       placeholder-name: 'Player'
 
 placeholder:

@@ -18,6 +18,9 @@ public class JoinListener implements Listener {
     @EventHandler
     public void onJoin(PlayerJoinEvent event) {
         Player player = event.getPlayer();
+        if (plugin.getConfig().getBoolean("chat.joinMessage")) {
+            event.setJoinMessage(plugin.getConfig().getString("chat.joinMessageFormat").replace("%player_name%", player.getName()));
+        }
         if (player.hasPermission("bunnyuniverse.updatenotify") || player.isOp()) {
             Bukkit.getScheduler().runTaskAsynchronously(plugin, () -> {
                 if (Updater.checkVersion()) {

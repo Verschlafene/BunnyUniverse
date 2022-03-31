@@ -73,8 +73,8 @@ public class RankManager {
             if (all != player) {
                 Teams teams = Teams.get(all);
                 if (teams != null) {
-                    Team team = player.getScoreboard().getTeam(teams.getTeamname());
-                    if (team == null) team = player.getScoreboard().registerNewTeam(teams.getTeamname());
+                    Team team = player.getScoreboard().getTeam(teams.getTeamName());
+                    if (team == null) team = player.getScoreboard().registerNewTeam(teams.getTeamName());
                     String prefix = teams.getPrefix();
                     String suffix = teams.getSuffix();
                     ChatColor nameColor = teams.getNameColor();
@@ -93,8 +93,8 @@ public class RankManager {
             String suffix = teams.getSuffix();
             if (plugin.getConfig().getBoolean("ranks.useUnlimitedLongRanks")) player.setPlayerListName(prefix + player.getDisplayName());
             for (Player all : Bukkit.getOnlinePlayers()) {
-                Team team = all.getScoreboard().getTeam(teams.getTeamname());
-                if (team == null) team = all.getScoreboard().registerNewTeam(teams.getTeamname());
+                Team team = all.getScoreboard().getTeam(teams.getTeamName());
+                if (team == null) team = all.getScoreboard().registerNewTeam(teams.getTeamName());
                 setPrefixSuffix(player, team, prefix, suffix);
                 if (nameColor != null && BunnyUniverse.aboveMC_1_13) team.setColor(nameColor);
                 team.addEntry(player.getName());
@@ -117,8 +117,8 @@ public class RankManager {
             if (teams != null) {
                 ChatColor nameColor = teams.getNameColor();
                 for (Player all : Bukkit.getOnlinePlayers()) {
-                    Team team = all.getScoreboard().getTeam(teams.getTeamname());
-                    if (team == null) team = all.getScoreboard().registerNewTeam(teams.getTeamname());
+                    Team team = all.getScoreboard().getTeam(teams.getTeamName());
+                    if (team == null) team = all.getScoreboard().registerNewTeam(teams.getTeamName());
                     setPrefixSuffix(player, team, prefix, suffix);
                     if (nameColor != null && BunnyUniverse.aboveMC_1_13) team.setColor(nameColor);
                     team.addEntry(player.getName());

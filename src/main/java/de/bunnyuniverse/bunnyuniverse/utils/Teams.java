@@ -115,7 +115,7 @@ public class Teams {
         return Placeholders.replace(player, this.chatPrefix) + message;
     }
 
-    public String getTeamname() {
+    public String getTeamName() {
         if (this.player == null) {
             BunnyUniverse.plugin.getLogger().severe(BunnyUniverse.prefix + "An error occurred while reading the data of the player " + player.getName() + "!");
             return null;

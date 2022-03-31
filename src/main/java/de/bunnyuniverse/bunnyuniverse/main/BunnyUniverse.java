@@ -33,10 +33,15 @@ public final class BunnyUniverse extends JavaPlugin {
     @Override
     public void onEnable() {
         plugin = this;
-        plugin.getLogger().info(prefix + "Loading BunnyUniverse");
+        plugin.getLogger().info(prefix + "-------------------------------");
+        plugin.getLogger().info(prefix + "---- Loading BunnyUniverse ----");
+        plugin.getLogger().info(prefix + " ");
 
+        plugin.getLogger().info(prefix + "Loading Listeners...");
         listenerRegistration();
+        plugin.getLogger().info(prefix + "Loading Commands...");
         commandRegistration();
+        plugin.getLogger().info(prefix + "Listeners and Command loaded!");
 
         version = getBukkitVersion();
         if (version.compareTo(new Version("1.13")) >= 0) {
@@ -57,7 +62,7 @@ public final class BunnyUniverse extends JavaPlugin {
             Bukkit.getScheduler().runTaskAsynchronously(plugin, () -> {
                 if (Updater.checkVersion()) {
                     plugin.getLogger().info(prefix + "-> A new version (" + Updater.getVersion() + ") is available! Current version: " + plugin.getDescription().getVersion());
-                    plugin.getLogger().info(prefix + " -> Please update me!");
+                    plugin.getLogger().info(prefix + "-> Please update me!");
                 }
             });
 
@@ -76,7 +81,7 @@ public final class BunnyUniverse extends JavaPlugin {
                     if (plugin.getConfig().getBoolean("scoreboard")) ScoreboardPlayer.setScoreboard(all);
                     if (plugin.getConfig().getBoolean("tablist.active")) TablistPlayer.addPlayer(all, null);
                 }
-                plugin.getLogger().info(prefix + "All players have been registed!");
+                plugin.getLogger().info(prefix + "All players have been registered!");
             }, 30);
             plugin.getLogger().info(prefix + " ");
             plugin.getLogger().info(prefix + "---- BunnyUniverse loaded ----");
@@ -165,8 +170,8 @@ public final class BunnyUniverse extends JavaPlugin {
         }
     }
     public static void sendPluginLoadFailed() {
-        plugin.getLogger().severe(prefix + "----------------------------------------------------");
-        plugin.getLogger().severe(prefix + "---- Errors occured while loading BunnyUniverse ----");
-        plugin.getLogger().severe(prefix + "----------------------------------------------------");
+        plugin.getLogger().severe(prefix + "-----------------------------------------------------");
+        plugin.getLogger().severe(prefix + "---- Errors occurred while loading BunnyUniverse ----");
+        plugin.getLogger().severe(prefix + "-----------------------------------------------------");
     }
 }
