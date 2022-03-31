@@ -2,3 +2,8 @@ name: BunnyUniverse
 version: '${project.version}'
 main: de.bunnyuniverse.bunnyuniverse.main.BunnyUniverse
 api-version: 1.18
+commands:
+  setspawn:
+    description: Sets the spawn at your location
+  spawn:
+    description: Teleports you to the spawn
