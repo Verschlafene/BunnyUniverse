@@ -2,8 +2,12 @@ name: BunnyUniverse
 version: '${project.version}'
 main: de.bunnyuniverse.bunnyuniverse.main.BunnyUniverse
 api-version: 1.18
+softdepend: [PermissionsEx, Vault, PlaceholderAPI, LuckPerms]
 commands:
   setspawn:
     description: Sets the spawn at your location
   spawn:
     description: Teleports you to the spawn
+  bunnyuniverse:
+    aliases: [bu]
+    description: Main command for this plugin

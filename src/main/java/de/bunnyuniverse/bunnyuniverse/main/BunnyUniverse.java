@@ -1,5 +1,6 @@
 package de.bunnyuniverse.bunnyuniverse.main;
 
+import de.bunnyuniverse.bunnyuniverse.commands.BunnyUniverseCommand;
 import de.bunnyuniverse.bunnyuniverse.commands.SetSpawnCommand;
 import de.bunnyuniverse.bunnyuniverse.commands.SpawnCommand;
 import de.bunnyuniverse.bunnyuniverse.listeners.*;
@@ -109,6 +110,7 @@ public final class BunnyUniverse extends JavaPlugin {
     private void commandRegistration() {
         getCommand("setspawn").setExecutor(new SetSpawnCommand());
         getCommand("spawn").setExecutor(new SpawnCommand());
+        getCommand("bunnyuniverse").setExecutor(new BunnyUniverseCommand());
     }
 
     private static boolean reloadDelay = false;

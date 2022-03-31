@@ -171,7 +171,7 @@ public class Config {
                 score3.add("Ani");
                 score3.add("An");
                 score3.add("A");
-                config.addDefault("2.speed", 13);
+                config.addDefault("2.speed", 5);
                 config.addDefault("2.scores", score3);
 
                 score4.add(" ");
@@ -185,6 +185,7 @@ public class Config {
                 score6.add(ChatColor.GRAY + "> " + ChatColor.RED + "Your Rank:");
                 score6.add(ChatColor.GRAY + "> " + ChatColor.YELLOW + "Your Name:");
                 score6.add(ChatColor.GRAY + "> " + ChatColor.GREEN + "Your Saturation:");
+                score6.add(ChatColor.GRAY + "> " + ChatColor.GREEN + "Your Food");
                 score6.add(ChatColor.GRAY + "> " + ChatColor.AQUA + "Your Hearts:");
                 score6.add(ChatColor.GRAY + "> " + ChatColor.BLUE + "Your World:");
                 score6.add(ChatColor.GRAY + "> " + ChatColor.RED + "Time:");
@@ -198,6 +199,7 @@ public class Config {
                 score7.add(ChatColor.GRAY + ">> " + ChatColor.DARK_RED + "%player_rank%");
                 score7.add(ChatColor.GRAY + ">> " + ChatColor.GOLD + "%player_name%");
                 score7.add(ChatColor.GRAY + ">> " + ChatColor.DARK_GREEN + "%player_saturation%");
+                score7.add(ChatColor.GRAY + ">> " + ChatColor.DARK_GREEN + "%player_food%");
                 score7.add(ChatColor.GRAY + ">> " + ChatColor.DARK_AQUA + "%player_health%");
                 score7.add(ChatColor.GRAY + ">> " + ChatColor.DARK_BLUE + "%player_world%");
                 score7.add(ChatColor.GRAY + ">> " + ChatColor.DARK_RED + "%time%");
@@ -256,29 +258,31 @@ public class Config {
                 config.set("footer.2.speed", 9999);
                 config.set("footer.2.lines", footer2);
 
-                footer3.add(ChatColor.GRAY + "> " + ChatColor.RED + "Your Rank" + ChatColor.GRAY + ":");
-                footer3.add(ChatColor.GRAY + "> " + ChatColor.YELLOW + "Your Name" + ChatColor.GRAY + ":");
-                footer3.add(ChatColor.GRAY + "> " + ChatColor.GREEN + "Your Saturation" + ChatColor.GRAY + ":");
-                footer3.add(ChatColor.GRAY + "> " + ChatColor.AQUA + "Your Hearts" + ChatColor.GRAY + ":");
-                footer3.add(ChatColor.GRAY + "> " + ChatColor.BLUE + "Your World" + ChatColor.GRAY + ":");
-                footer3.add(ChatColor.GRAY + "> " + ChatColor.RED + "Time" + ChatColor.GRAY + ":");
-                footer3.add(ChatColor.GRAY + "> " + ChatColor.RED + "Date" + ChatColor.GRAY + ":");
-                footer3.add(ChatColor.GRAY + "> " + ChatColor.RED + "Server TPS" + ChatColor.GRAY + ":");
-                footer3.add(ChatColor.GRAY + "> " + ChatColor.RED + "Server RAM" + ChatColor.GRAY + ":");
-                footer3.add(ChatColor.GRAY + "> " + ChatColor.LIGHT_PURPLE + "Online Players" + ChatColor.GRAY + ":");
+                footer3.add(ChatColor.GRAY + "> " + ChatColor.RED + "Your Rank" + ChatColor.GRAY + ": <");
+                footer3.add(ChatColor.GRAY + "> " + ChatColor.YELLOW + "Your Name" + ChatColor.GRAY + ": <");
+                footer3.add(ChatColor.GRAY + "> " + ChatColor.GREEN + "Your Saturation" + ChatColor.GRAY + ": <");
+                footer3.add(ChatColor.GRAY + "> " + ChatColor.GREEN + "Your Food" + ChatColor.GRAY + ": <");
+                footer3.add(ChatColor.GRAY + "> " + ChatColor.AQUA + "Your Hearts" + ChatColor.GRAY + ": <");
+                footer3.add(ChatColor.GRAY + "> " + ChatColor.BLUE + "Your World" + ChatColor.GRAY + ": <");
+                footer3.add(ChatColor.GRAY + "> " + ChatColor.RED + "Time" + ChatColor.GRAY + ": <");
+                footer3.add(ChatColor.GRAY + "> " + ChatColor.RED + "Date" + ChatColor.GRAY + ": <");
+                footer3.add(ChatColor.GRAY + "> " + ChatColor.RED + "Server TPS" + ChatColor.GRAY + ": <");
+                footer3.add(ChatColor.GRAY + "> " + ChatColor.RED + "Server RAM" + ChatColor.GRAY + ": <");
+                footer3.add(ChatColor.GRAY + "> " + ChatColor.LIGHT_PURPLE + "Online Players" + ChatColor.GRAY + ": <");
                 config.set("footer.3.speed", 30);
                 config.set("footer.3.lines", footer3);
 
-                footer4.add(ChatColor.GRAY + ">> " + ChatColor.DARK_RED + "%player_rank%");
-                footer4.add(ChatColor.GRAY + ">> " + ChatColor.GOLD + "%player_name%");
-                footer4.add(ChatColor.GRAY + ">> " + ChatColor.DARK_GREEN + "%player_saturation%");
-                footer4.add(ChatColor.GRAY + ">> " + ChatColor.DARK_AQUA + "%player_health%");
-                footer4.add(ChatColor.GRAY + ">> " + ChatColor.DARK_BLUE + "%player_world%");
-                footer4.add(ChatColor.GRAY + ">> " + ChatColor.DARK_RED + "%time%");
-                footer4.add(ChatColor.GRAY + ">> " + ChatColor.DARK_RED + "%date%");
-                footer4.add(ChatColor.GRAY + ">> " + ChatColor.DARK_RED + "%server_tps%");
-                footer4.add(ChatColor.GRAY + ">> " + ChatColor.DARK_RED + "%mem_used%" + ChatColor.GRAY + "/" + ChatColor.DARK_RED + "%mem_total%");
-                footer4.add(ChatColor.GRAY + ">> " + ChatColor.DARK_PURPLE + " %server_online_players%" + ChatColor.GRAY + "/" + ChatColor.DARK_PURPLE + "%server_max_players%");
+                footer4.add(ChatColor.GRAY + ">> " + ChatColor.DARK_RED + "%player_rank%" + ChatColor.GRAY + " <<");
+                footer4.add(ChatColor.GRAY + ">> " + ChatColor.GOLD + "%player_name%" + ChatColor.GRAY + " <<");
+                footer4.add(ChatColor.GRAY + ">> " + ChatColor.DARK_GREEN + "%player_saturation%" + ChatColor.GRAY + " <<");
+                footer4.add(ChatColor.GRAY + ">> " + ChatColor.DARK_GREEN + "%player_food%" + ChatColor.GRAY + " <<");
+                footer4.add(ChatColor.GRAY + ">> " + ChatColor.DARK_AQUA + "%player_health%" + ChatColor.GRAY + " <<");
+                footer4.add(ChatColor.GRAY + ">> " + ChatColor.DARK_BLUE + "%player_world%" + ChatColor.GRAY + " <<");
+                footer4.add(ChatColor.GRAY + ">> " + ChatColor.DARK_RED + "%time%" + ChatColor.GRAY + " <<");
+                footer4.add(ChatColor.GRAY + ">> " + ChatColor.DARK_RED + "%date%" + ChatColor.GRAY + " <<");
+                footer4.add(ChatColor.GRAY + ">> " + ChatColor.DARK_RED + "%server_tps%" + ChatColor.GRAY + " <<");
+                footer4.add(ChatColor.GRAY + ">> " + ChatColor.DARK_RED + "%mem_used%" + ChatColor.GRAY + "/" + ChatColor.DARK_RED + "%mem_total%" + ChatColor.GRAY + " <<");
+                footer4.add(ChatColor.GRAY + ">> " + ChatColor.DARK_PURPLE + " %server_online_players%" + ChatColor.GRAY + "/" + ChatColor.DARK_PURPLE + "%server_max_players%" + ChatColor.GRAY + " <<");
                 config.set("footer.4.speed", 30);
                 config.set("footer.4.lines", footer4);
 
