@@ -1,0 +1,84 @@
+scoreboard: true
+scoreboard-default: 'scoreboard'
+
+tablist:
+  active: true
+  text-default: 'tablist'
+  ranks: true
+
+motd:
+  active: true
+  maxPlayers: 1337
+  firstLines:
+    - "#ff9aa2R #ffb7b2A #ffdac1I #e2f0cbN #b5ead7B #c7ceeaO #b19cd9W"
+    - "#b19cd9R #ff9aa2A #ffb7b2I #ffdac1N #e2f0cbB #b5ead7O #c7ceeaW"
+    - "#c7ceeaR #b19cd9A #ff9aa2I #ffb7b2N #ffdac1B #e2f0cbO #b5ead7W"
+    - "#b5ead7R #c7ceeaA #b19cd9I #ff9aa2N #ffb7b2B #ffdac1O #e2f0cbW"
+    - "#e2f0cbR #b5ead7A #c7ceeaI #b19cd9N #ff9aa2B #ffb7b2O #ffdac1W"
+    - "#ffdac1R #e2f0cbA #b5ead7I #c7ceeaN #b19cd9B #ff9aa2O #ffb7b2W"
+    - "#ffb7b2R #ffdac1A #e2f0cbI #b5ead7N #c7ceeaB #b19cd9O #ff9aa2W"
+  secondLines:
+    - "#ff9aa2Made by Nikki"
+    - "#ffb7b2Made by Nikki"
+    - "#ffdac1Made by Nikki"
+    - "#e2f0cbMade by Nikki"
+    - "#b5ead7Made by Nikki"
+    - "#c7ceeaMade by Nikki"
+    - "#b19cd9Made by Nikki"
+
+chat:
+  ranks: true
+  colorperm: 'chat.color'
+  allowHexColors: true
+
+ranks:
+  permissionsystem: 'none'
+
+  useUnlimitedLongRanks: false
+
+  update-interval: -1
+
+  luckperms-api:
+    enabled: false
+    prefix-suffix-space: false
+    chat-layout: '%prefix% %player_name% &7» '
+    chat-prefix:
+      owner: '&4Owner &7| &4%player_name% &7» '
+      admin: '&cAdmin &7| &c%player_name% &7» '
+      player: '&7Player | %player_name% » '
+
+  list:
+    owner:
+      permission: 'rank.owner'
+      prefix: '&4Owner &7| &4'
+      suffix: ' &7[&eTeam&7]'
+      chatPrefix: '&7[&cOwner&7] %player_name% » '
+      placeholder-name: 'Owner'
+    admin:
+      permission: 'rank.admin'
+      prefix: '&cAdmin &7| &c'
+      suffix: ' &7[&eTeam&7]'
+      chatPrefix: '&7[&4Admin&7] %player_name% » '
+      placeholder-name: 'Admin'
+    player:
+      permission: 'rank.player'
+      prefix: '&7Player | '
+      suffix: ''
+      chatPrefix: '&7[&aPlayer&7] %player_name% » '
+      placeholder-name: 'Player'
+
+placeholder:
+  prefer-plugin-placeholders: true
+  time-format: 'HH:mm'
+  date-format: 'dd.MM.yyyy'
+  money-decimals: 2
+  world-names:
+    world: 'Overworld'
+    world_nether: 'Nether'
+    world_the_end: 'The End'
+
+update:
+  notification: true
+  autoupdater: false
+
+debug: false

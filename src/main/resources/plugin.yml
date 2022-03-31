@@ -1,0 +1,4 @@
+name: BunnyUniverse
+version: '${project.version}'
+main: de.bunnyuniverse.bunnyuniverse.main.BunnyUniverse
+api-version: 1.18
